@@ -15,7 +15,8 @@ namespace inheritance
 
         public void PrintFullName()
         {
-
+            Console.WriteLine(FirstName + " " + LastName);
+            
         }
 
     }
@@ -27,7 +28,7 @@ namespace inheritance
 
     class PartTimeEmployee : Employee
     {
-        float HourlySalary;
+        public float HourlySalary;
     }
 
     class Program
@@ -40,6 +41,14 @@ namespace inheritance
             FTE.LastName = "Senevirathna";
             FTE.AnnualSalary = 120000;
             FTE.PrintFullName();
+
+            PartTimeEmployee PTE = new PartTimeEmployee();
+            PTE.FirstName = "Pubudu";
+            PTE.LastName = "Bandara";
+            PTE.HourlySalary = 2000;
+            PTE.PrintFullName();
+
+            Console.ReadLine();
         }
     }
 }
